@@ -16,8 +16,8 @@ I've created a **complete GitHub repository** with all your SANS Holiday Hack Ch
 
 **Act Breakdown:**
 - ✅ **Act 1**: 10 challenges with 60 images (Complete)
-- ⚠️ **Act 2**: 7 challenges (Content complete, images pending user extraction)
-- ✅ **Act 3**: 2 challenges with 20 images + Python scripts (Complete)
+- ✅ **Act 2**: 7 challenges (Complete)
+- ⚠️ **Act 3**: 2 challenges with 20 images + Python scripts (In Progress - Documentation phase)
 
 ---
 

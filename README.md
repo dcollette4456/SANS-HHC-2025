@@ -30,7 +30,7 @@
 7. [Rogue Gnome Identity Provider](ACT-2/07-rogue-gnome-identity-provider.md) ⭐⭐⭐⭐⭐
 
 ### Act 3: Expert Challenges
-1. [GnomeTea - Firebase Security Misconfiguration](ACT-3/01-gnometea.md) ⭐⭐⭐
+1. [GnomeTea - Firebase Security Misconfiguration](ACT-3/01-gnometea.md) ⭐⭐⭐ (In Progress)
 2. [Snowcat Privilege Escalation](ACT-3/02-snowcat-privilege-escalation.md) ⭐⭐⭐ (In Progress)
 
 ---
@@ -100,10 +100,10 @@
 
 ## 📊 Statistics
 
-- **Total Challenges Completed**: 19/19 (Acts 1, 2 & 3)
+- **Total Challenges Completed**: 17/19 (Acts 1 & 2 complete, Act 3 in progress)
 - **Act 1**: 10/10 challenges ✅
 - **Act 2**: 7/7 challenges ✅
-- **Act 3**: 2/2 challenges documented (1 Complete ✅, 1 In Progress ⚠️)
+- **Act 3**: 2/2 challenges documented (both in progress ⚠️)
 - **Difficulty Range**: ⭐ to ⭐⭐⭐⭐⭐
 - **Primary Domains**: Cloud Security, Linux Privilege Escalation, Network Analysis, Web Security, Cryptography, Binary Exploitation
 - **Images**: 80+ screenshots (60 Act 1, 20 Act 3; Act 2 pending extraction)
