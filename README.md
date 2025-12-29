@@ -29,6 +29,10 @@
 6. [Quantgnome Leap](ACT-2/06-quantgnome-leap.md) ⭐⭐
 7. [Rogue Gnome Identity Provider](ACT-2/07-rogue-gnome-identity-provider.md) ⭐⭐⭐⭐⭐
 
+### Act 3: Expert Challenges
+1. [GnomeTea - Firebase Security Misconfiguration](ACT-3/01-gnometea.md) ⭐⭐⭐
+2. [Snowcat Privilege Escalation](ACT-3/02-snowcat-privilege-escalation.md) ⭐⭐⭐ (In Progress)
+
 ---
 
 ## 🎯 Challenge Summary
@@ -57,6 +61,12 @@
 | Going in Reverse | ⭐⭐ | Reverse Engineering | BASIC, XOR cipher, Base64 decoding |
 | Quantgnome Leap | ⭐⭐ | Post-Quantum Crypto | PQC, ML-DSA, SSH authentication |
 | Rogue Gnome Identity Provider | ⭐⭐⭐⭐⭐ | Authentication | JWT forgery, JKU injection, privilege escalation |
+
+### Act 3
+| Challenge | Difficulty | Category | Skills Demonstrated |
+|-----------|------------|----------|---------------------|
+| GnomeTea | ⭐⭐⭐ | Firebase/NoSQL | Firestore exploitation, security rules bypass, OSINT |
+| Snowcat Privilege Escalation | ⭐⭐⭐ | Binary Exploitation | Java deserialization (CVE-2025-24813), SUID binaries |
 
 ---
 
@@ -90,12 +100,14 @@
 
 ## 📊 Statistics
 
-- **Total Challenges Completed**: 17/17 (Acts 1 & 2)
+- **Total Challenges Completed**: 19/19 (Acts 1, 2 & 3)
 - **Act 1**: 10/10 challenges ✅
 - **Act 2**: 7/7 challenges ✅
+- **Act 3**: 2/2 challenges documented (1 Complete ✅, 1 In Progress ⚠️)
 - **Difficulty Range**: ⭐ to ⭐⭐⭐⭐⭐
-- **Primary Domains**: Cloud Security, Linux Privilege Escalation, Network Analysis, Web Security, Cryptography
-- **Images**: 60+ screenshots Act 1 (Act 2 images pending extraction)
+- **Primary Domains**: Cloud Security, Linux Privilege Escalation, Network Analysis, Web Security, Cryptography, Binary Exploitation
+- **Images**: 80+ screenshots (60 Act 1, 20 Act 3; Act 2 pending extraction)
+- **Python Scripts**: 3 GnomeTea extraction/analysis tools included
 - **Detailed Walkthroughs**: Complete step-by-step solutions with commands and outputs
 
 ---
@@ -141,6 +153,20 @@
 - Malicious JavaScript detection in emails
 - Data exfiltration techniques
 - Reverse engineering BASIC programs
+
+### Firebase & NoSQL Security (Act 3)
+- Firebase/Firestore security rule misconfigurations
+- Direct database access via browser console JavaScript
+- Client-side configuration exposure risks
+- NoSQL injection and unauthorized data extraction
+- OSINT for credential discovery
+
+### Binary Exploitation & Privilege Escalation (Act 3)
+- Java deserialization attacks (ysoserial, CommonsCollections gadget chains)
+- CVE exploitation methodology
+- SUID/SGID binary analysis and exploitation attempts
+- RCE limitations in restricted environments
+- String analysis for reverse engineering
 
 ---
 
