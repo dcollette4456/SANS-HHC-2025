@@ -10,7 +10,7 @@
 
 ### Act 1: The Gnome Invasion
 1. [Its All About Defang](ACT-1/SANS2025_WriteUp_ACT1_Its_All_About_Defang.md) - ⭐ - IOC extraction, regex, defanging, SOC workflows
-2. [Neighborhood Watch Bypass](ACT-1/02-neighborhood-watch-bypass.md) ⭐⭐
+2. [Neighborhood Watch Bypass](ACT-1/SANS2025_WriteUp_ACT1_Neighborhood_Watch_Bypass.md) ⭐⭐ - Linux privilege escalation via PATH hijacking
 3. [Santa's Gift-Tracking Service Port Mystery](ACT-1/03-santas-gift-tracker.md) ⭐
 4. [Visual Networking Thinger](ACT-1/04-visual-networking.md) ⭐
 5. [Visual Firewall Thinger](ACT-1/05-visual-firewall.md) ⭐
