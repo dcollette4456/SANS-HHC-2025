@@ -12,7 +12,7 @@
 1. [Its All About Defang](ACT-1/SANS2025_WriteUp_ACT1_Its_All_About_Defang.md) - ⭐ - IOC extraction, regex, defanging, SOC workflows
 2. [Neighborhood Watch Bypass](ACT-1/SANS2025_WriteUp_ACT1_Neighborhood_Watch_Bypass.md) ⭐⭐ - Linux privilege escalation via PATH hijacking
 3. [Santa's Gift-Tracking Service Port Mystery](ACT-1/SANS2025_WriteUp_ACT1_Santas_Gift_Tracker.md) ⭐ - Network port discovery with `ss`
-4. [Visual Networking Thinger](ACT-1/04-visual-networking.md) ⭐
+4. [Visual Networking Thinger](ACT-1/SANS2025_WriteUp_ACT1_Visual_Networking.md) ⭐ - Interactive networking fundamentals
 5. [Visual Firewall Thinger](ACT-1/05-visual-firewall.md) ⭐
 6. [Intro to Nmap](ACT-1/06-intro-to-nmap.md) ⭐
 7. [Blob Storage Challenge in the Neighborhood](ACT-1/07-blob-storage.md) ⭐
