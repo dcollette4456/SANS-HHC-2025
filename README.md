@@ -15,7 +15,7 @@
 4. [Visual Networking Thinger](ACT-1/SANS2025_WriteUp_ACT1_Visual_Networking.md) ⭐ - Interactive networking fundamentals
 5. [Visual Firewall Thinger](ACT-1/SANS2025_WriteUp_ACT1_Visual_Firewall.md) ⭐ - Firewall rules and network segmentation
 6. [Intro to Nmap](ACT-1/SANS2025_WriteUp_ACT1_Intro_to_Nmap.md) ⭐ - Port scanning and service detection
-7. [Blob Storage Challenge](ACT-1/07-blob-storage.md) ⭐⭐ - Azure storage security and public access misconfiguration
+7. [Blob Storage Challenge](ACT-1/SANS2025_WriteUp_ACT1_Blob_Storage.md) ⭐⭐ - Azure storage security and public access misconfiguration
 8. [Spare Key](ACT-1/08-spare-key.md) ⭐⭐
 9. [The Open Door](ACT-1/09-the-open-door.md) ⭐
 10. [Owner](ACT-1/10-owner.md) ⭐⭐
