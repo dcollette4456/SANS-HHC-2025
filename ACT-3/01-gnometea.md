@@ -2,6 +2,8 @@
 
 **Difficulty:** ⭐⭐⭐
 
+**Status:** ⚠️ In Progress - Documentation from reconnaissance and initial exploitation phases
+
 **SANS Holiday Hack Challenge 2025 - Act 3**
 
 ---

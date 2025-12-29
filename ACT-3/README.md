@@ -1,6 +1,6 @@
 # Act 3 Challenges - SANS Holiday Hack Challenge 2025
 
-**Status:** 2/2 Documented (1 Complete, 1 In Progress)
+**Status:** 2/2 Documented (both in progress)
 
 Act 3 features advanced challenges combining web security, privilege escalation, and data exfiltration techniques.
 
@@ -9,7 +9,7 @@ Act 3 features advanced challenges combining web security, privilege escalation,
 ### 1. [GnomeTea - Firebase Security Misconfiguration](01-gnometea.md)
 
 **Difficulty:** ⭐⭐⭐  
-**Status:** ✅ Complete
+**Status:** ⚠️ In Progress
 
 Exploit Firebase/Firestore security misconfigurations to access a secret passphrase stored in a protected admin collection.
 
