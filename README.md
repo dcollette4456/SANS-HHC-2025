@@ -20,19 +20,20 @@
 9. [The Open Door](ACT-1/09-the-open-door.md) ⭐
 10. [Owner](ACT-1/10-owner.md) ⭐⭐
 
-### Act 2: _Coming Soon_
-- Retro Recovery
-- Mail Detective
-- IDORable Bistro
-- Dosis Network Down
-- Rogue Gnome Identity Provider
-- Quantgnome Leap
-- Going in Reverse
+### Act 2: Advanced Challenges
+1. [Retro Recovery](ACT-2/01-retro-recovery.md) ⭐⭐
+2. [Mail Detective](ACT-2/02-mail-detective.md) ⭐⭐
+3. [IDORable Bistro](ACT-2/03-idorable-bistro.md) ⭐⭐
+4. [Dosis Network Down](ACT-2/04-dosis-network-down.md) ⭐⭐
+5. [Going in Reverse](ACT-2/05-going-in-reverse.md) ⭐⭐
+6. [Quantgnome Leap](ACT-2/06-quantgnome-leap.md) ⭐⭐
+7. [Rogue Gnome Identity Provider](ACT-2/07-rogue-gnome-identity-provider.md) ⭐⭐⭐⭐⭐
 
 ---
 
 ## 🎯 Challenge Summary
 
+### Act 1
 | Challenge | Difficulty | Category | Skills Demonstrated |
 |-----------|------------|----------|---------------------|
 | Its All About Defang | ⭐ | IOC Analysis | Regex, Defanging, SOC Operations |
@@ -45,6 +46,17 @@
 | Spare Key | ⭐⭐ | Azure Security | SAS token leak, IaC security |
 | The Open Door | ⭐ | Azure NSG | Network Security Groups, RDP exposure |
 | Owner | ⭐⭐ | Azure RBAC | Role auditing, PIM, nested groups |
+
+### Act 2
+| Challenge | Difficulty | Category | Skills Demonstrated |
+|-----------|------------|----------|---------------------|
+| Retro Recovery | ⭐⭐ | Digital Forensics | FAT12, Sleuth Kit, deleted file recovery |
+| Mail Detective | ⭐⭐ | Email Security | IMAP, curl, malicious JavaScript analysis |
+| IDORable Bistro | ⭐⭐ | Web Security | IDOR vulnerabilities, API exploitation |
+| Dosis Network Down | ⭐⭐ | Router Exploitation | CVE-2023-1389, command injection |
+| Going in Reverse | ⭐⭐ | Reverse Engineering | BASIC, XOR cipher, Base64 decoding |
+| Quantgnome Leap | ⭐⭐ | Post-Quantum Crypto | PQC, ML-DSA, SSH authentication |
+| Rogue Gnome Identity Provider | ⭐⭐⭐⭐⭐ | Authentication | JWT forgery, JKU injection, privilege escalation |
 
 ---
 
@@ -78,35 +90,57 @@
 
 ## 📊 Statistics
 
-- **Total Challenges Completed**: 10/10 (Act 1)
-- **Difficulty Range**: ⭐ to ⭐⭐
-- **Primary Domains**: Cloud Security, Linux Privilege Escalation, Network Analysis
-- **Images**: 60+ screenshots and diagrams
+- **Total Challenges Completed**: 17/17 (Acts 1 & 2)
+- **Act 1**: 10/10 challenges ✅
+- **Act 2**: 7/7 challenges ✅
+- **Difficulty Range**: ⭐ to ⭐⭐⭐⭐⭐
+- **Primary Domains**: Cloud Security, Linux Privilege Escalation, Network Analysis, Web Security, Cryptography
+- **Images**: 60+ screenshots Act 1 (Act 2 images pending extraction)
 - **Detailed Walkthroughs**: Complete step-by-step solutions with commands and outputs
 
 ---
 
 ## 💡 Key Learnings
 
-### Azure Security
+### Azure Security (Act 1)
 - RBAC audit techniques and PIM enforcement
 - NSG misconfiguration identification
 - SAS token security and expiration policies
 - Public blob access risks
 - Nested group permission inheritance
 
-### Linux Privilege Escalation
+### Linux Privilege Escalation (Act 1)
 - PATH hijacking via sudo with preserved environment
 - env_keep+=PATH vulnerability
 - Exploiting scripts with relative command paths
 - Enumeration methodology (sudo -l, SUID binaries)
 
-### Network & SOC Operations
+### Network & SOC Operations (Act 1)
 - IOC extraction with regex
 - Proper defanging standards
 - Port scanning methodologies
 - Network protocol fundamentals
 - Firewall zone configuration
+
+### Web Security & Authentication (Act 2)
+- JWT forgery and JKU injection attacks
+- IDOR (Insecure Direct Object Reference) exploitation
+- API enumeration and testing
+- Router exploitation (CVE-2023-1389)
+- Command injection vulnerabilities
+
+### Cryptography & Forensics (Act 2)
+- Post-Quantum Cryptography (PQC) concepts
+- ML-DSA and hybrid cryptographic schemes
+- FAT12 filesystem analysis
+- Deleted file recovery with Sleuth Kit
+- XOR cipher and Base64 encoding
+
+### Email & Protocol Security (Act 2)
+- IMAP protocol analysis with curl
+- Malicious JavaScript detection in emails
+- Data exfiltration techniques
+- Reverse engineering BASIC programs
 
 ---
 
