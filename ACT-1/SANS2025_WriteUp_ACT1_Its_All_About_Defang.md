@@ -328,3 +328,9 @@ Email security gateways use similar regex patterns to automatically detect and q
 
 **SANS Holiday Hack Challenge 2025**  
 *Act 1: Its All About Defang*
+
+---
+
+*Challenge writeup by SFC David P. Collette*  
+*Regional Cyber Center - Korea (RCC-K)*  
+*SANS Holiday Hack Challenge 2025*
