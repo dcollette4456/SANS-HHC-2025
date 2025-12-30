@@ -206,7 +206,7 @@ sendgrid_api_key_vault_ref = "@Microsoft.KeyVault(SecretUri=https://kv-neighborh
 
 This is the **correct** way to handle secrets! The organization made an exception for the 'temporary' migration token and forgot to remove it.
 
----
+---images/act1/spare-key-02-completion.png
 
 ## Challenge Completion
 
