@@ -32,7 +32,7 @@ az group list -o table
 
 **Result:**
 
-![Resource Groups](images/act1/spare-key-01-resource-groups.png)
+![Resource Groups](../images/act1/spare-key-01-resource-groups.png)
 
 **Five resource groups discovered:**
 - `rg-the-neighborhood` (eastus)
@@ -210,7 +210,7 @@ This is the **correct** way to handle secrets! The organization made an exceptio
 
 ## Challenge Completion
 
-![Challenge Complete](images/act1/spare-key-02-completion.png)
+![Challenge Complete](../images/act1/spare-key-02-completion.png)
 
 ### Answer Summary:
 
