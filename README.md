@@ -2,7 +2,7 @@
 
 > **Author**: SFC David P. Collette  
 > **Organization**: United States Army - Regional Cyber Center - Korea (RCC-K)  
-> **Role**: Senior Executive in Defensive Cyber Operations | Penetration Testing Instructor
+> **Role**: Senior Executive in Defensive Cyber Operations | Incident Responder | Penetration Tester
 
 ---
 
@@ -170,7 +170,7 @@
 
 ---
 
-## 🎓 About RCC-K
+## 🎓 About RCC-K - Where I Work
 
 The Regional Cyber Center - Korea (RCC-K) provides defensive cyber operations support, penetration testing, and cybersecurity training for U.S. Army forces in the Korean theater. These write-ups demonstrate real-world skills applied in:
 
