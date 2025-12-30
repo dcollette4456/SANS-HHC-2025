@@ -12,7 +12,7 @@ Help Goose James near the park audit Azure RBAC (Role-Based Access Control) conf
 
 ## Character Introduction: James
 
-![Challenge Introduction](images/act1/owner-01-jmespath-tutorial.png)
+![Challenge Introduction](images/act1/owner/owner-01-jmespath-tutorial.png)
 
 *Goose James introduces the RBAC audit challenge*
 
@@ -78,7 +78,7 @@ az account list --query "[].name"
 - `[]` = Loop through each item in the array
 - `.name` = Extract the `name` field from each item
 
-![JMESPath Tutorial](images/act1/owner-01-jmespath-tutorial.png)
+![JMESPath Tutorial](images/act1/owner/owner-01-jmespath-tutorial.png)
 
 *Tutorial explaining how to use JMESPath to filter Azure CLI output*
 
@@ -119,7 +119,7 @@ az account list --query "[?state=='Enabled'].{Name:name, ID:id}"
 - `[?state=='Enabled']` = **Filter:** Only show enabled subscriptions
 - `.{Name:name, ID:id}` = **Custom output:** Display only Name and ID fields
 
-![Subscription IDs](images/act1/owner-03-subscription-ids.png)
+![Subscription IDs](images/act1/owner/owner-03-subscription-ids.png)
 
 *Custom formatted output showing subscription names and IDs*
 
@@ -154,7 +154,7 @@ Now we'll check each subscription for Owner role assignments:
 az role assignment list --scope "/subscriptions/2b0942f3-9bca-484b-a508-abdae2db5e64" --query [?roleDefinitionName=='Owner']
 ```
 
-![Subscription 1 Owner Assignments](images/act1/owner-04-sub1-pim-owners.png)
+![Subscription 1 Owner Assignments](images/act1/owner/owner-04-sub1-pim-owners.png)
 
 *Subscription 1 shows only PIM-Owners group*
 
@@ -175,7 +175,7 @@ az role assignment list --scope "/subscriptions/2b0942f3-9bca-484b-a508-abdae2db
 az role assignment list --scope "/subscriptions/4d9dbf2a-90b4-4d40-a97f-dc51f3c3d46e" --query [?roleDefinitionName=='Owner']
 ```
 
-![Subscription 2 Owner Assignments](images/act1/owner-05-sub2-pim-owners.png)
+![Subscription 2 Owner Assignments](images/act1/owner/owner-05-sub2-pim-owners.png)
 
 *Subscription 2 also shows only PIM-Owners group*
 
@@ -189,7 +189,7 @@ az role assignment list --scope "/subscriptions/4d9dbf2a-90b4-4d40-a97f-dc51f3c3
 az role assignment list --scope "/subscriptions/065cc24a-077e-40b9-b666-2f4dd9f3a617" --query [?roleDefinitionName=='Owner']
 ```
 
-![Subscription 3 Owner Assignments Full](images/act1/owner-06-sub3-it-admins-full.png)
+![Subscription 3 Owner Assignments Full](images/act1/owner/owner-06-sub3-it-admins-full.png)
 
 *Subscription 3 shows TWO Owner assignments - suspicious!*
 
@@ -211,7 +211,7 @@ az role assignment list --scope "/subscriptions/065cc24a-077e-40b9-b666-2f4dd9f3
 ]
 ```
 
-![IT Admins Detail](images/act1/owner-07-sub3-it-admins-detail.png)
+![IT Admins Detail](images/act1/owner/owner-07-sub3-it-admins-detail.png)
 
 *Close-up of the suspicious "IT Admins" group with Owner permissions*
 
@@ -230,7 +230,7 @@ A group called **"IT Admins"** has been granted Owner permissions at the subscri
 az role assignment list --scope "/subscriptions/681c0111-ca84-47b2-808d-d8be2325b380" --query [?roleDefinitionName=='Owner']
 ```
 
-![Subscription 4 Owner Assignments](images/act1/owner-08-sub4-pim-owners.png)
+![Subscription 4 Owner Assignments](images/act1/owner/owner-08-sub4-pim-owners.png)
 
 *Subscription 4 returns to secure configuration with only PIM-Owners*
 
@@ -246,7 +246,7 @@ Let's see who's in this group:
 az ad group member list --group 6b982f2f-78a0-44a8-b915-79240b2b4796
 ```
 
-![Nested Group Discovery](images/act1/owner-09-nested-group.png)
+![Nested Group Discovery](images/act1/owner/owner-09-nested-group.png)
 
 *Discovering a nested group instead of direct users*
 
@@ -283,7 +283,7 @@ Let's find the actual users:
 az ad group member list --group 631ebd3f-39f9-4492-a780-aef2aec8c94e
 ```
 
-![Firewall Frank Discovery](images/act1/owner-10-firewall-frank.png)
+![Firewall Frank Discovery](images/act1/owner/owner-10-firewall-frank.png)
 
 *Finally discovering the user with excessive permissions: Firewall Frank*
 
