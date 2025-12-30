@@ -9,25 +9,25 @@
 ## 📋 Table of Contents
 
 ### Act 1: The Gnome Invasion
-1. [Its All About Defang](ACT-1/SANS2025_WriteUp_ACT1_Its_All_About_Defang.md) - ⭐ - IOC extraction, regex, defanging, SOC workflows
-2. [Neighborhood Watch Bypass](ACT-1/SANS2025_WriteUp_ACT1_Neighborhood_Watch_Bypass.md) ⭐⭐ - Linux privilege escalation via PATH hijacking
-3. [Santa's Gift-Tracking Service Port Mystery](ACT-1/SANS2025_WriteUp_ACT1_Santas_Gift_Tracker.md) ⭐ - Network port discovery with `ss`
-4. [Visual Networking Thinger](ACT-1/SANS2025_WriteUp_ACT1_Visual_Networking.md) ⭐ - Interactive networking fundamentals
-5. [Visual Firewall Thinger](ACT-1/SANS2025_WriteUp_ACT1_Visual_Firewall.md) ⭐ - Firewall rules and network segmentation
-6. [Intro to Nmap](ACT-1/SANS2025_WriteUp_ACT1_Intro_to_Nmap.md) ⭐ - Port scanning and service detection
-7. [Blob Storage Challenge](ACT-1/SANS2025_WriteUp_ACT1_Blob_Storage.md) ⭐⭐ - Azure storage security and public access misconfiguration
-8. [Spare Key](ACT-1/SANS2025_WriteUp_ACT1_Spare_Key.md) ⭐⭐ - Azure Storage, Infrastructure as Code Security
-9. [The Open Door](ACT-1/09-the-open-door.md) ⭐ - Azure NSG enumeration to find RDP exposed to internet
-10. [Owner](ACT-1/10-owner.md) ⭐⭐ - Azure RBAC, Identify excessive Owner permissions
+1. [Its All About Defang](ACT-1/SANS2025_WriteUp_ACT1_Its_All_About_Defang.md) - ⭐ - Defang phishing IOCs
+2. [Neighborhood Watch Bypass](ACT-1/SANS2025_WriteUp_ACT1_Neighborhood_Watch_Bypass.md) ⭐⭐ - Restore fire alarm
+3. [Santa's Gift-Tracking Service Port Mystery](ACT-1/SANS2025_WriteUp_ACT1_Santas_Gift_Tracker.md) ⭐ - Find tracker port
+4. [Visual Networking Thinger](ACT-1/SANS2025_WriteUp_ACT1_Visual_Networking.md) ⭐ - Networking fundamentals
+5. [Visual Firewall Thinger](ACT-1/SANS2025_WriteUp_ACT1_Visual_Firewall.md) ⭐ - Configure firewall rules
+6. [Intro to Nmap](ACT-1/SANS2025_WriteUp_ACT1_Intro_to_Nmap.md) ⭐ - Port scanning basics
+7. [Blob Storage Challenge](ACT-1/SANS2025_WriteUp_ACT1_Blob_Storage.md) ⭐⭐ - Find public storage
+8. [Spare Key](ACT-1/SANS2025_WriteUp_ACT1_Spare_Key.md) ⭐⭐ - Find leaked token
+9. [The Open Door](ACT-1/09-the-open-door.md) ⭐ - Find exposed RDP
+10. [Owner](ACT-1/10-owner.md) ⭐⭐ - Find excessive permissions
     
 ### Act 2: Advanced Challenges
-1. [Retro Recovery](ACT-2/01-retro-recovery.md) ⭐⭐ - FAT12 forensics, deleted file recovery
-2. [Mail Detective](ACT-2/02-mail-detective.md) ⭐⭐ - IMAP email analysis via curl, finding malicious JavaScript exfiltration
-3. [IDORable Bistro](ACT-2/03-idorable-bistro.md) ⭐⭐ - IDOR vulnerability exploitation via API enumeration
-4. [Dosis Network Down](ACT-2/SANS2025_WriteUp_ACT2_Dosis_Network_Down.md) ⭐⭐ - Router CVE-2023-1389 exploitation
-5. [Going in Reverse](ACT-2/SANS2025_WriteUp_ACT2_Going_In_Reverse.md) ⭐⭐ - C64 BASIC XOR decryption
-6. [Quantgnome Leap](ACT-2/06-quantgnome-leap.md) ⭐⭐ - Post-Quantum Cryptography SSH authentication chain
-7. [Rogue Gnome Identity Provider](ACT-2/SANS2025_WriteUp_ACT2_Rogue_Gnome_Identity_Provider.md) ⭐⭐⭐⭐⭐ - JWT JKU injection exploit
+1. [Retro Recovery](ACT-2/01-retro-recovery.md) ⭐⭐ - Recover deleted files
+2. [Mail Detective](ACT-2/02-mail-detective.md) ⭐⭐ - Find malicious email
+3. [IDORable Bistro](ACT-2/03-idorable-bistro.md) ⭐⭐ - Unmask the gnome
+4. [Dosis Network Down](ACT-2/SANS2025_WriteUp_ACT2_Dosis_Network_Down.md) ⭐⭐ - Recover WiFi password
+5. [Going in Reverse](ACT-2/SANS2025_WriteUp_ACT2_Going_In_Reverse.md) ⭐⭐ - Decrypt BASIC program
+6. [Quantgnome Leap](ACT-2/06-quantgnome-leap.md) ⭐⭐ - Quantum crypto riddles
+7. [Rogue Gnome Identity Provider](ACT-2/SANS2025_WriteUp_ACT2_Rogue_Gnome_Identity_Provider.md) ⭐⭐⭐⭐⭐ - Gain admin access
 
 ### Act 3: Expert Challenges
 1. [GnomeTea - Firebase Security Misconfiguration](ACT-3/01-gnometea.md) ⭐⭐⭐ (In Progress)
