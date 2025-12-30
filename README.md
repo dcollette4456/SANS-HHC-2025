@@ -21,12 +21,12 @@
 10. [Owner](ACT-1/10-owner.md) ⭐⭐ - Azure RBAC, Identify excessive Owner permissions
     
 ### Act 2: Advanced Challenges
-1. [Retro Recovery](ACT-2/01-retro-recovery.md) ⭐⭐
-2. [Mail Detective](ACT-2/02-mail-detective.md) ⭐⭐
-3. [IDORable Bistro](ACT-2/03-idorable-bistro.md) ⭐⭐
+1. [Retro Recovery](ACT-2/01-retro-recovery.md) ⭐⭐ - FAT12 forensics, deleted file recovery
+2. [Mail Detective](ACT-2/02-mail-detective.md) ⭐⭐ - IMAP email analysis via curl, finding malicious JavaScript exfiltration
+3. [IDORable Bistro](ACT-2/03-idorable-bistro.md) ⭐⭐ - IDOR vulnerability exploitation via API enumeration
 4. [Dosis Network Down](ACT-2/SANS2025_WriteUp_ACT2_Dosis_Network_Down.md) ⭐⭐ - Router CVE-2023-1389 exploitation
 5. [Going in Reverse](ACT-2/SANS2025_WriteUp_ACT2_Going_In_Reverse.md) ⭐⭐ - C64 BASIC XOR decryption
-6. [Quantgnome Leap](ACT-2/06-quantgnome-leap.md) ⭐⭐
+6. [Quantgnome Leap](ACT-2/06-quantgnome-leap.md) ⭐⭐ - Post-Quantum Cryptography SSH authentication chain
 7. [Rogue Gnome Identity Provider](ACT-2/SANS2025_WriteUp_ACT2_Rogue_Gnome_Identity_Provider.md) ⭐⭐⭐⭐⭐ - JWT JKU injection exploit
 
 ### Act 3: Expert Challenges
