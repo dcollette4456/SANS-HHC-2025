@@ -24,10 +24,10 @@
 1. [Retro Recovery](ACT-2/01-retro-recovery.md) ⭐⭐
 2. [Mail Detective](ACT-2/02-mail-detective.md) ⭐⭐
 3. [IDORable Bistro](ACT-2/03-idorable-bistro.md) ⭐⭐
-4. [Dosis Network Down](ACT-2/04-dosis-network-down.md) ⭐⭐
-5. [Going in Reverse](ACT-2/05-going-in-reverse.md) ⭐⭐
+4. [Dosis Network Down](ACT-2/SANS2025_WriteUp_ACT2_Dosis_Network_Down.md) ⭐⭐ - Router CVE-2023-1389 exploitation
+5. [Going in Reverse](ACT-2/SANS2025_WriteUp_ACT2_Going_In_Reverse.md) ⭐⭐ - C64 BASIC XOR decryption
 6. [Quantgnome Leap](ACT-2/06-quantgnome-leap.md) ⭐⭐
-7. [Rogue Gnome Identity Provider](ACT-2/07-rogue-gnome-identity-provider.md) ⭐⭐⭐⭐⭐
+7. [Rogue Gnome Identity Provider](ACT-2/SANS2025_WriteUp_ACT2_Rogue_Gnome_Identity_Provider.md) ⭐⭐⭐⭐⭐ - JWT JKU injection exploit
 
 ### Act 3: Expert Challenges
 1. [GnomeTea - Firebase Security Misconfiguration](ACT-3/01-gnometea.md) ⭐⭐⭐ (In Progress)
