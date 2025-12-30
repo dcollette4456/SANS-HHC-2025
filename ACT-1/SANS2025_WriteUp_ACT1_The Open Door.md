@@ -17,7 +17,7 @@ Help Goose Lucas audit the Dosis Neighborhood's Azure network security configura
 
 ## Character Introduction: Lucas
 
-![Challenge Badge](images/act1/01-challenge-badge.png)
+![Challenge Badge](../images/act1/01-challenge-badge.png)
 
 *The Open Door - Help Goose Lucas find the dangerously misconfigured Network Security Group rule*
 
@@ -49,7 +49,7 @@ When we access the terminal, we're presented with a welcome message explaining o
 # Your mission: Review their network configurations and find what doesn't belong.
 ```
 
-![Challenge Welcome Screen](images/act1/02-welcome-screen.png)
+![Challenge Welcome Screen](../images/act1/02-welcome-screen.png)
 
 *The terminal welcome message explaining JSON and table output formats*
 
@@ -73,7 +73,7 @@ theneighborhood-rg1   eastus      Succeeded
 theneighborhood-rg2   westus      Succeeded
 ```
 
-![Resource Groups](images/act1/03-resource-groups.png)
+![Resource Groups](../images/act1/03-resource-groups.png)
 
 *Resource groups displayed in JSON format showing theneighborhood-rg1 and theneighborhood-rg2*
 
@@ -128,7 +128,7 @@ az network nsg show --name nsg-web-eastus --resource-group theneighborhood-rg1 |
 az network nsg rule list --nsg-name nsg-mgmt-eastus --resource-group theneighborhood-rg2 -o table
 ```
 
-![Management NSG Rules](images/act1/04-mgmt-nsg-rules.png)
+![Management NSG Rules](../images/act1/04-mgmt-nsg-rules.png)
 
 *Management NSG showing secure Azure Bastion configuration*
 
@@ -160,7 +160,7 @@ az network nsg rule list --nsg-name nsg-dev-eastus --resource-group theneighborh
 az network nsg rule list --nsg-name nsg-production-eastus --resource-group theneighborhood-rg1 -o table
 ```
 
-![All NSG Rules Comparison](images/act1/05-all-nsg-rules.png)
+![All NSG Rules Comparison](../images/act1/05-all-nsg-rules.png)
 
 *Comparison of database, development, and production NSG rules showing the critical vulnerability*
 
@@ -207,7 +207,7 @@ az network nsg rule show \
 }
 ```
 
-![RDP Rule Details](images/act1/06-rdp-rule-details.png)
+![RDP Rule Details](../images/act1/06-rdp-rule-details.png)
 
 *Detailed view of the Allow-RDP-From-Internet rule showing port 3389 open to 0.0.0.0/0*
 
@@ -273,7 +273,7 @@ az network nsg rule show \
 
 When submitting the answer, the challenge confirms:
 
-![Challenge Complete](images/act1/07-challenge-complete.png)
+![Challenge Complete](../images/act1/07-challenge-complete.png)
 
 *Challenge completion screen with achievement notification*
 
