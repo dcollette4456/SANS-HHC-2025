@@ -879,3 +879,9 @@ AzureActivity
 **Skills Mastered:** Azure Storage security, cloud misconfiguration detection, credential exposure analysis  
 **Tools:** Azure CLI, Azure Storage Explorer  
 **HONK:** Maximum Security Achieved! 🦆🔒
+
+---
+
+*Challenge writeup by SFC David P. Collette*  
+*Regional Cyber Center - Korea (RCC-K)*  
+*SANS Holiday Hack Challenge 2025*
