@@ -322,3 +322,9 @@ ncat 127.0.12.25 24601
 **Status:** ✅ Challenge Completed  
 **Skills Mastered:** Port scanning, service detection, network reconnaissance  
 **X-Ray Vision:** Activated! 🔍🎯
+
+---
+
+*Challenge writeup by SFC David P. Collette*  
+*Regional Cyber Center - Korea (RCC-K)*  
+*SANS Holiday Hack Challenge 2025*
