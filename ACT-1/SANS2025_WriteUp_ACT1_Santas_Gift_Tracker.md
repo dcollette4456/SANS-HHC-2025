@@ -417,3 +417,9 @@ Port 12321 falls in the **registered ports** range - suitable for application se
 **Status:** ✅ Completed  
 **Port Discovered:** 12321  
 **Christmas Spirit:** Saved! 🎅🎄
+
+---
+
+*Challenge writeup by SFC David P. Collette*  
+*Regional Cyber Center - Korea (RCC-K)*  
+*SANS Holiday Hack Challenge 2025*
