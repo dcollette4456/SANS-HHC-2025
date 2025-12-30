@@ -17,9 +17,9 @@
 6. [Intro to Nmap](ACT-1/SANS2025_WriteUp_ACT1_Intro_to_Nmap.md) ⭐ - Port scanning and service detection
 7. [Blob Storage Challenge](ACT-1/SANS2025_WriteUp_ACT1_Blob_Storage.md) ⭐⭐ - Azure storage security and public access misconfiguration
 8. [Spare Key](ACT-1/SANS2025_WriteUp_ACT1_Spare_Key.md) ⭐⭐ - Azure Storage, Infrastructure as Code Security
-9. [The Open Door](ACT-1/09-the-open-door.md) ⭐
-10. [Owner](ACT-1/10-owner.md) ⭐⭐
-
+9. [The Open Door](ACT-1/09-the-open-door.md) ⭐ - Azure NSG enumeration to find RDP exposed to internet
+10. [Owner](ACT-1/10-owner.md) ⭐⭐ - Azure RBAC, Identify excessive Owner permissions
+    
 ### Act 2: Advanced Challenges
 1. [Retro Recovery](ACT-2/01-retro-recovery.md) ⭐⭐
 2. [Mail Detective](ACT-2/02-mail-detective.md) ⭐⭐
