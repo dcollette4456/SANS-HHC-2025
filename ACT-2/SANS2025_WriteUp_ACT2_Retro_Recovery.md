@@ -17,7 +17,7 @@ Explore vintage computing forensics by investigating a FAT12 floppy disk image f
 
 ## Character Introduction
 
-![Challenge Location](../images/act2/retro-recovery-01.png)
+![Challenge Location](../images/act2/retro-recovery-02.png)
 
 *The Retro Store - Where vintage computing history comes alive*
 
@@ -56,7 +56,7 @@ sectors/track 18, reserved 0x1, serial number 0x9c01e8ae, unlabeled,
 FAT (12 bit), followed by FAT
 ```
 
-![Downloaded Floppy Image](../images/act2/retro-recovery-02.png)
+![Downloaded Floppy Image](../images/act2/retro-recovery-01.png)
 
 *The floppy.img file information showing FAT12 filesystem details*
 
