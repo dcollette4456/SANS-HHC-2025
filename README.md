@@ -27,7 +27,7 @@
 4. [Dosis Network Down](ACT-2/SANS2025_WriteUp_ACT2_Dosis_Network_Down.md) ⭐⭐ - Recover WiFi password
 5. [Going in Reverse](ACT-2/SANS2025_WriteUp_ACT2_Going_In_Reverse.md) ⭐⭐ - Decrypt BASIC program
 6. [Quantgnome Leap](ACT-2/06-quantgnome-leap.md) ⭐⭐ - Quantum crypto riddles
-7. [Rogue Gnome Identity Provider](ACT-2/SANS2025_WriteUp_ACT2_Rogue_Gnome_Identity_Provider.md) ⭐⭐⭐⭐⭐ - Gain admin access
+7. [Rogue Gnome Identity Provider](ACT-2/SANS2025_WriteUp_ACT2_Rogue_Gnome_Identity_Provider.md) ⭐⭐ - Gain admin access
 
 ### Act 3: Expert Challenges
 1. [GnomeTea - Firebase Security Misconfiguration](ACT-3/01-gnometea.md) ⭐⭐⭐ (In Progress)
