@@ -10,7 +10,7 @@ Help Grace the Goose audit the Neighborhood HOA's Azure storage accounts to iden
 
 ### Grace (Goose)
 
-![Challenge Introduction](images/100000010000032800000122C1390D19.png)
+![Challenge Introduction](../images/100000010000032800000122C1390D19.png)
 
 *Grace the Goose needs help auditing Azure storage security configurations*
 
@@ -92,7 +92,7 @@ az storage account list | less
 - Suspicious configurations
 - Public access settings
 
-![Storage Account Analysis](images/10000001000004F6000001A50D971A40.png)
+![Storage Account Analysis](../images/10000001000004F6000001A50D971A40.png)
 
 *Examining storage account configurations reveals "neighborhood2" has suspicious settings*
 
@@ -104,7 +104,7 @@ Examine specific storage account details:
 az storage account show --name neighborhood2 | less
 ```
 
-![Detailed Account View](images/100000010000056E000001DF318BD300.png)
+![Detailed Account View](../images/100000010000056E000001DF318BD300.png)
 
 *The "neighborhood2" account shows three critical security misconfigurations*
 
@@ -222,7 +222,7 @@ az storage container list --account-name neighborhood2 --auth-mode login -o tabl
 - **Public Access** - Access level (None, Blob, Container)
 - **Last Modified** - When container was updated
 
-![Container List](images/10000001000003C7000001272B23CF0C.png)
+![Container List](../images/10000001000003C7000001272B23CF0C.png)
 
 *Two containers found: "public" and "private" - the naming is ironic!*
 
@@ -254,7 +254,7 @@ See what files are exposed in the public container:
 az storage blob list --account-name neighborhood2 --container-name public --auth-mode login -o table
 ```
 
-![Blob List](images/1000000100000180000000C57C9D1667.png)
+![Blob List](../images/1000000100000180000000C57C9D1667.png)
 
 *Files discovered in the public container - one looks very suspicious!*
 
@@ -310,7 +310,7 @@ az storage blob download \
 - `--auth-mode login` - Authenticate using Azure CLI credentials
 - `| less` - Page through output
 
-![Downloaded Credentials](images/1000000100000336000002C61E9C9CFE.png)
+![Downloaded Credentials](../images/1000000100000336000002C61E9C9CFE.png)
 
 *Complete credential dump revealing access to 12 critical systems!*
 
@@ -465,7 +465,7 @@ This exposure violates:
 
 ## Challenge Complete!
 
-![Achievement Badge](images/100000010000023E000000E38D2CDFC4.png)
+![Achievement Badge](../images/100000010000023E000000E38D2CDFC4.png)
 
 *Successfully identified the misconfigured storage account and exposed credentials!*
 
