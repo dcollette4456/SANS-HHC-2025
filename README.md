@@ -21,7 +21,7 @@
 10. [Owner](ACT-1/10-owner.md) ⭐⭐ - Find excessive permissions
     
 ### Act 2: Advanced Challenges
-1. [Retro Recovery](ACT-2/01-retro-recovery.md) ⭐⭐ - Recover deleted files
+1. [Retro Recovery](ACT-2/SANS2025_WriteUp_ACT2_Retro_Recovery.md) ⭐⭐ - Recover deleted files
 2. [Mail Detective](ACT-2/02-mail-detective.md) ⭐⭐ - Find malicious email
 3. [IDORable Bistro](ACT-2/03-idorable-bistro.md) ⭐⭐ - Unmask the gnome
 4. [Dosis Network Down](ACT-2/SANS2025_WriteUp_ACT2_Dosis_Network_Down.md) ⭐⭐ - Recover WiFi password
