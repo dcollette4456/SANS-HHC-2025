@@ -580,3 +580,9 @@ Now that you understand these networking basics, you can:
 **Status:** ✅ All 5 Challenges Completed  
 **Skills Mastered:** DNS, TCP, HTTP, TLS, HTTPS  
 **Knowledge Level:** Networking Fundamentals 🌐
+
+---
+
+*Challenge writeup by SFC David P. Collette*  
+*Regional Cyber Center - Korea (RCC-K)*  
+*SANS Holiday Hack Challenge 2025*
