@@ -529,3 +529,9 @@ This vulnerability pattern appears frequently in production systems:
 
 **SANS Holiday Hack Challenge 2025**  
 *Act 1: Neighborhood Watch Bypass*
+
+---
+
+*Challenge writeup by SFC David P. Collette*  
+*Regional Cyber Center - Korea (RCC-K)*  
+*SANS Holiday Hack Challenge 2025*
