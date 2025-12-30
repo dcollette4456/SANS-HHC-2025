@@ -752,3 +752,9 @@ Protocol: TCP
 **Status:** ✅ Challenge Completed  
 **Skills Mastered:** Network segmentation, firewall rules, DMZ design, defense in depth  
 **Security Level:** Network Fundamentals 🔥🛡️
+
+---
+
+*Challenge writeup by SFC David P. Collette*  
+*Regional Cyber Center - Korea (RCC-K)*  
+*SANS Holiday Hack Challenge 2025*
