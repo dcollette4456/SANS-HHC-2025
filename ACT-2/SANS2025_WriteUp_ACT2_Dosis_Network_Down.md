@@ -22,7 +22,7 @@ JJ needs help recovering access to the neighborhood's router after the gnomes lo
 
 ### Router Login Page
 
-![Dosis Router Login Page](images/act2/dosis-network-01-image1.png)
+![Dosis Router Login Page](../images/act2/dosis-network-01-image1.png)
 
 *The router login page displays critical version information at the bottom*
 
@@ -125,7 +125,7 @@ https://dosis-network-down.holidayhackchallenge.com/cgi-bin/luci/;stok=/locale?f
 
 **Response:**
 
-![OK Response](images/act2/dosis-network-02-image2.png)
+![OK Response](../images/act2/dosis-network-02-image2.png)
 
 *The simple 'OK' response indicates the router accepted our malicious payload*
 
@@ -135,7 +135,7 @@ https://dosis-network-down.holidayhackchallenge.com/cgi-bin/luci/;stok=/locale?f
 
 Refresh the page or make the same request again. On the second attempt, the router executes the injected command and returns the wireless configuration file contents directly in the browser!
 
-![Wireless Configuration](images/act2/dosis-network-03-image3.png)
+![Wireless Configuration](../images/act2/dosis-network-03-image3.png)
 
 *The router dumps the entire /etc/config/wireless file, revealing WiFi credentials in plaintext!*
 
