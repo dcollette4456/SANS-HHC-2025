@@ -60,7 +60,7 @@
 | Dosis Network Down | ⭐⭐ | Router Exploitation | CVE-2023-1389, command injection |
 | Going in Reverse | ⭐⭐ | Reverse Engineering | BASIC, XOR cipher, Base64 decoding |
 | Quantgnome Leap | ⭐⭐ | Post-Quantum Crypto | PQC, ML-DSA, SSH authentication |
-| Rogue Gnome Identity Provider | ⭐⭐⭐⭐⭐ | Authentication | JWT forgery, JKU injection, privilege escalation |
+| Rogue Gnome Identity Provider | ⭐⭐ | Authentication | JWT forgery, JKU injection, privilege escalation |
 
 ### Act 3
 | Challenge | Difficulty | Category | Skills Demonstrated |
