@@ -1,4 +1,4 @@
-# GnomeTea - Firebase Security Misconfiguration
+# GnomeTea - Firebase Security Misconfiguration - Not Complete
 
 **Difficulty:** ⭐⭐⭐
 
