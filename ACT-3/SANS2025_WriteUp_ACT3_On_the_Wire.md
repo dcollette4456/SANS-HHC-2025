@@ -1,4 +1,4 @@
-# On the Wire
+# On the Wire - in Progress
 
 **Challenge Type:** Protocol Analysis, Signal Decoding, Cryptography  
 **Difficulty:** ⭐⭐⭐⭐ (4/5)  
