@@ -32,6 +32,7 @@
 ### Act 3: Expert Challenges
 1. [GnomeTea - Firebase Security Misconfiguration](ACT-3/01-gnometea.md) ⭐⭐⭐ (In Progress)
 2. [Snowcat Privilege Escalation](ACT-3/02-snowcat-privilege-escalation.md) ⭐⭐⭐ (In Progress)
+3. [Free Ski - PyInstaller Reverse Engineering](ACT-3/SANS2025_WriteUp_ACT3_Free_Ski.md) ⭐⭐⭐⭐⭐ - Decode hidden flags
 
 ---
 
@@ -67,6 +68,7 @@
 |-----------|------------|----------|---------------------|
 | GnomeTea | ⭐⭐⭐ | Firebase/NoSQL | Firestore exploitation, security rules bypass, OSINT |
 | Snowcat Privilege Escalation | ⭐⭐⭐ | Binary Exploitation | Java deserialization (CVE-2025-24813), SUID binaries |
+| Free Ski | ⭐⭐⭐⭐⭐ | Reverse Engineering | PyInstaller extraction, Python bytecode analysis, XOR cipher, PRNG exploitation |
 
 ---
 
@@ -90,24 +92,32 @@
 - ncat
 - telnet
 
+**Reverse Engineering**:
+- PyInstxtractor
+- Python dis module
+- uncompyle6
+- ysoserial
+
 **Security Concepts**:
 - IOC defanging
 - Regex patterns
 - Phishing analysis
 - Infrastructure as Code (IaC) security
+- JWT exploitation
+- XOR cipher cryptanalysis
 
 ---
 
 ## 📊 Statistics
 
-- **Total Challenges Completed**: 17/19 (Acts 1 & 2 complete, Act 3 in progress)
+- **Total Challenges Completed**: 18/19 (Acts 1 & 2 complete, Act 3: 1 complete + 2 in progress)
 - **Act 1**: 10/10 challenges ✅
 - **Act 2**: 7/7 challenges ✅
-- **Act 3**: 2/2 challenges documented (both in progress ⚠️)
+- **Act 3**: 3/3 challenges documented (1 complete ✅, 2 in progress ⚠️)
 - **Difficulty Range**: ⭐ to ⭐⭐⭐⭐⭐
-- **Primary Domains**: Cloud Security, Linux Privilege Escalation, Network Analysis, Web Security, Cryptography, Binary Exploitation
-- **Images**: 80+ screenshots (60 Act 1, 20 Act 3; Act 2 pending extraction)
-- **Python Scripts**: 3 GnomeTea extraction/analysis tools included
+- **Primary Domains**: Cloud Security, Linux Privilege Escalation, Network Analysis, Web Security, Cryptography, Binary Exploitation, Reverse Engineering
+- **Images**: 85+ screenshots (60 Act 1, 20 Act 3, 5 Free Ski; Act 2 pending extraction)
+- **Python Scripts**: 4 included (3 GnomeTea extraction/analysis, 1 Free Ski decoder)
 - **Detailed Walkthroughs**: Complete step-by-step solutions with commands and outputs
 
 ---
@@ -154,14 +164,24 @@
 - Data exfiltration techniques
 - Reverse engineering BASIC programs
 
-### Firebase & NoSQL Security (Act 3)
+### Reverse Engineering & Cryptography (Act 3 - Free Ski)
+- PyInstaller executable extraction and analysis
+- Python bytecode disassembly and reconstruction
+- Understanding compiled .pyc file structure
+- PRNG (Pseudo-Random Number Generator) exploitation
+- XOR cipher cryptanalysis and weaknesses
+- Deterministic random number generation vulnerabilities
+- Difference between `random` (PRNG) and `secrets` (CSRNG)
+- Real-world implications of insecure randomness in cryptographic applications
+
+### Firebase & NoSQL Security (Act 3 - GnomeTea)
 - Firebase/Firestore security rule misconfigurations
 - Direct database access via browser console JavaScript
 - Client-side configuration exposure risks
 - NoSQL injection and unauthorized data extraction
 - OSINT for credential discovery
 
-### Binary Exploitation & Privilege Escalation (Act 3)
+### Binary Exploitation & Privilege Escalation (Act 3 - Snowcat)
 - Java deserialization attacks (ysoserial, CommonsCollections gadget chains)
 - CVE exploitation methodology
 - SUID/SGID binary analysis and exploitation attempts
@@ -177,6 +197,7 @@ The Regional Cyber Center - Korea (RCC-K) provides defensive cyber operations su
 - **Incident Response**: IOC analysis and threat intelligence sharing
 - **Security Auditing**: Cloud configuration reviews and RBAC auditing
 - **Penetration Testing**: Privilege escalation and exploitation techniques
+- **Reverse Engineering**: Malware analysis and software security assessment
 - **Training & Education**: Creating educational materials for cybersecurity awareness
 
 ---
