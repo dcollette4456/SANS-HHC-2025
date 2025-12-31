@@ -32,7 +32,8 @@
 ### Act 3: Expert Challenges
 1. [GnomeTea - Firebase Security Misconfiguration](ACT-3/01-gnometea.md) ⭐⭐⭐ (In Progress)
 2. [Snowcat Privilege Escalation](ACT-3/02-snowcat-privilege-escalation.md) ⭐⭐⭐ (In Progress)
-3. [Free Ski - PyInstaller Reverse Engineering](ACT-3/SANS2025_WriteUp_ACT3_Free_Ski.md) ⭐⭐⭐⭐⭐ - Decode hidden flags
+3. [On the Wire](ACT-3/SANS2025_WriteUp_ACT3_On_the_Wire.md) ⭐⭐⭐⭐ - (In Progress)
+4. [Free Ski - PyInstaller Reverse Engineering](ACT-3/SANS2025_WriteUp_ACT3_Free_Ski.md) ⭐⭐⭐⭐⭐ - Decode hidden flags
 
 ---
 
@@ -68,6 +69,7 @@
 |-----------|------------|----------|---------------------|
 | GnomeTea | ⭐⭐⭐ | Firebase/NoSQL | Firestore exploitation, security rules bypass, OSINT |
 | Snowcat Privilege Escalation | ⭐⭐⭐ | Binary Exploitation | Java deserialization (CVE-2025-24813), SUID binaries |
+| On the Wire | ⭐⭐⭐⭐ | Signal Decoding Challenge | Serial protocol analysis (SPI/I2C/1-Wire), WebSocket capture automation, XOR cryptanalysis |
 | Free Ski | ⭐⭐⭐⭐⭐ | Reverse Engineering | PyInstaller extraction, Python bytecode analysis, XOR cipher, PRNG exploitation |
 
 ---
