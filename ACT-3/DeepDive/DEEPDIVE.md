@@ -11,28 +11,6 @@ This document contains all the technical artifacts, scripts, analysis notes, and
 
 ---
 
-## 📁 Repository Structure
-
-```
-FreeSki/
-├── WRITEUP.md                    # Main challenge write-up (start here!)
-├── DEEPDIVE.md                   # This file - technical deep dive
-├── images/                       # Screenshots for main write-up
-│   ├── 01-challenge-briefing.png
-│   ├── 02-pyinstaller-extraction.png
-│   ├── 03-bytecode-analysis.png
-│   ├── 04-decode-script.png
-│   └── 05-flag-revealed.png
-├── DeepDive/                     # All supplementary materials
-│   ├── scripts/                  # Working Python scripts
-│   ├── artifacts/                # Extraction and analysis files
-│   ├── bytecode/                 # Bytecode analysis
-│   └── screenshots/              # Additional process screenshots
-└── README.md                     # Quick overview and links
-```
-
----
-
 ## 🐍 Scripts
 
 ### decode_final.py - Complete Solution
