@@ -62,7 +62,7 @@ cd pyinstxtractor
 python3 -m pyinstxtractor ../FreeSki.exe
 ```
 
-![PyInstaller Extraction](images/act3/freeski-02.png)
+![PyInstaller Extraction](../images/act3/freeski-02.png)
 
 *PyInstaller successfully extracts the bundled Python application*
 
@@ -250,7 +250,7 @@ Tried ascending, descending, sorted values - all failed.
 
 ### Critical Bytecode Discovery
 
-![Treasure Value Calculation Bytecode](images/act3/freeski-03.png)
+![Treasure Value Calculation Bytecode](../images/act3/freeski-03.png)
 
 *Line 380 reveals the treasure value formula*
 
@@ -281,7 +281,7 @@ treasure_value = elevation * mountain_width + horizontal_position
 
 ### Complete Decoding Script
 
-![Successful Decoding](images/act3/freeski-04.png)
+![Successful Decoding](../images/act3/freeski-04.png)
 
 *The decode script with correct treasure value calculation*
 
@@ -339,7 +339,7 @@ for name, height, encoded_flag in mountains:
 
 ### Execution Results
 
-![Flag Revealed](images/act3/freeski-05.png)
+![Flag Revealed](../images/act3/freeski-05.png)
 
 *Mount Snow successfully decodes to reveal the flag*
 
