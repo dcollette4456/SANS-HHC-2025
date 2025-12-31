@@ -47,7 +47,7 @@ The Free Ski challenge presents what appears to be a simple skiing game but is a
 
 ## Challenge Overview
 
-![Challenge Briefing](images/01-challenge-briefing.png)
+![Challenge Briefing](../images/act3/Free_Ski/screenshot_29.png)
 
 *The Free Ski challenge as presented - a deceptively simple skiing game*
 
@@ -295,7 +295,7 @@ python3 -m pip install pyinstxtractor
 
 ### Extraction Process
 
-![PyInstaller Extraction](images/02-pyinstaller-extraction.png)
+![PyInstaller Extraction](../images/act3/Free_Ski/image2.png)
 
 *Successful PyInstaller extraction showing 87 files in CArchive and 321 files in PYZ*
 
@@ -878,7 +878,7 @@ grep -B10 -A5 "SetFlag.*call\|SetFlag.*CALL" FreeSki_bytecode.txt
 
 **Found at Line 380-382:**
 
-![Treasure Value Calculation Bytecode](images/03-bytecode-analysis.png)
+![Treasure Value Calculation Bytecode](../images/act3/Free_Ski/screenshot_04.png)
 
 *The critical bytecode showing the actual treasure value formula: elevation * mountain_width + horizontal*
 
@@ -975,8 +975,6 @@ Treasure 5: elevation=466, horizontal=85
 
 ### Complete Decoding Script
 
-![Final Decode Script](images/04-decode-script.png)
-
 *The final working decode script with correct treasure value calculation*
 
 ```python
@@ -1070,7 +1068,7 @@ python3.13 final_decode.py
 
 ### Results
 
-![Success - Flag Revealed!](images/05-flag-revealed.png)
+![Success - Flag Revealed!](../images/act3/Free_Ski/screenshot_02.png)
 
 *Victory! Mount Snow successfully decoded to reveal the flag: frosty_yet_predictably_random*
 
