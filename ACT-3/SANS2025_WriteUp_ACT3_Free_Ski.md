@@ -270,7 +270,7 @@ python3 -m pip install pyinstxtractor
 
 ### Extraction Process
 
-![PyInstaller Extraction](../images/act3/freeski-02-extraction.png)
+![PyInstaller Extraction](../images/act3/freeski-02.png)
 
 *Testing the PyInstaller extraction theory*
 
