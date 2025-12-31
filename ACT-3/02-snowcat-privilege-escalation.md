@@ -1,4 +1,4 @@
-# Snowcat Privilege Escalation
+# Snowcat Privilege Escalation - Not Complete
 
 **Difficulty:** ⭐⭐⭐ (In Progress)
 
