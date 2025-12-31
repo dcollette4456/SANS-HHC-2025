@@ -37,10 +37,19 @@ The Free Ski challenge presents what appears to be a simple skiing game but is a
 10. [Final Solution](#final-solution)
 11. [Technical Deep Dive](#technical-deep-dive)
 12. [Lessons Learned](#lessons-learned)
+13. [📚 Deep Dive Materials](#-deep-dive-materials)
+14. [Tools Reference](#tools-reference)
+15. [Conclusion](#conclusion)
+16. [References](#references)
+17. [Acknowledgments](#acknowledgments)
 
 ---
 
 ## Challenge Overview
+
+![Challenge Briefing](images/01-challenge-briefing.png)
+
+*The Free Ski challenge as presented - a deceptively simple skiing game*
 
 When you first access the Free Ski challenge, you're presented with a deceptively simple premise: ski down a mountain, collect 5 treasures, avoid obstacles, and get your flag. Sounds easy, right?
 
@@ -120,6 +129,22 @@ An 8.5MB **single executable** with everything bundled suggests:
 
 This immediately shifts our approach from binary reverse engineering to Python analysis.
 
+### Step 3: String Analysis
+
+Let's search for readable strings to confirm our theory:
+
+```bash
+strings FreeSki.exe | grep -i "python\|pyinstaller\|pygame" | head -20
+```
+
+**Key Findings:**
+- Multiple "python313.dll" references
+- "PyInstaller" markers
+- "pygame" library strings
+- Python C API function names
+
+**Confirmation:** This is definitely a PyInstaller-bundled Python application!
+
 ---
 
 ## Attempt 1: Running the Game with Wine
@@ -151,7 +176,7 @@ sudo apt install wine wine32 wine64
 wine FreeSki.exe
 ```
 
-**Result:** ❌ Failed with DirectX errors
+**Result:** ❌ Failed with Python DLL errors
 
 ```
 0024:err:module:import_dll Library python313.dll not found
@@ -270,9 +295,9 @@ python3 -m pip install pyinstxtractor
 
 ### Extraction Process
 
-![PyInstaller Extraction](../images/act3/freeski-02.png)
+![PyInstaller Extraction](images/02-pyinstaller-extraction.png)
 
-*Testing the PyInstaller extraction theory*
+*Successful PyInstaller extraction showing 87 files in CArchive and 321 files in PYZ*
 
 ```bash
 # Create working directory
@@ -853,9 +878,9 @@ grep -B10 -A5 "SetFlag.*call\|SetFlag.*CALL" FreeSki_bytecode.txt
 
 **Found at Line 380-382:**
 
-![Treasure Value Calculation](../images/act3/freeski-03.png)
+![Treasure Value Calculation Bytecode](images/03-bytecode-analysis.png)
 
-*The bytecode showing the actual treasure value calculation*
+*The critical bytecode showing the actual treasure value formula: elevation * mountain_width + horizontal*
 
 ```assembly
 380        LOAD_FAST_CHECK          4 (treasures_collected)
@@ -950,9 +975,9 @@ Treasure 5: elevation=466, horizontal=85
 
 ### Complete Decoding Script
 
-![Decode Script](../images/act3/freeski-04.png)
+![Final Decode Script](images/04-decode-script.png)
 
-*The final decode script with correct treasure value calculation*
+*The final working decode script with correct treasure value calculation*
 
 ```python
 #!/usr/bin/env python3
@@ -1045,9 +1070,9 @@ python3.13 final_decode.py
 
 ### Results
 
-![Flag Revealed!](../images/act3/freeski-05.png)
+![Success - Flag Revealed!](images/05-flag-revealed.png)
 
-*Success! Mount Snow decodes to reveal the flag*
+*Victory! Mount Snow successfully decoded to reveal the flag: frosty_yet_predictably_random*
 
 **Output:**
 
@@ -1386,8 +1411,7 @@ I skimmed past `mountain_width` thinking it was unimportant!
 
 ```python
 import random
-random.seed(12345)
-# Deterministic, predictable, reversible
+random.seed(12345)  # Deterministic, predictable, reversible
 # Good for: games, simulations, testing
 # Bad for: cryptography, security
 ```
@@ -1396,8 +1420,7 @@ random.seed(12345)
 
 ```python
 import secrets
-secrets.token_bytes(32)
-# Non-deterministic, unpredictable, irreversible
+secrets.token_bytes(32)  # Non-deterministic, unpredictable, irreversible
 # Good for: cryptography, tokens, passwords
 # Bad for: nothing (use it for security!)
 ```
@@ -1575,6 +1598,49 @@ python -m uncompyle6 app.pyc > app.py
 
 ---
 
+## 📚 Deep Dive Materials
+
+**Want to reproduce this solution or study the techniques in depth?**
+
+This write-up covers the complete methodology and solution. For those interested in hands-on learning, technical implementation details, or reproducing the analysis yourself, check out the supplementary repository:
+
+### 🔗 [Free Ski Deep Dive Repository](./DeepDive/)
+
+**What's included:**
+
+#### 🐍 Working Scripts
+- **`decode_final.py`** - Complete solution with detailed comments for all 7 mountains
+- **`failed_attempts.py`** - All 5 failed approaches documented (learn from mistakes!)
+- **`generate_treasures.py`** - Standalone treasure location generator
+
+#### 📦 Extraction Artifacts  
+- **`file_analysis.txt`** - Full `strings` output and initial reconnaissance
+- **`pyinstaller_output.txt`** - Complete extraction log (87 CArchive files, 321 PYZ modules)
+- **`mountain_data.md`** - All 7 mountains with encoded flags and treasure locations
+
+#### 🔍 Bytecode Deep Dive
+- **`bytecode_analysis.md`** - Line-by-line algorithm reconstruction with annotations
+- **`critical_lines.txt`** - Key bytecode snippets with Python equivalents  
+- **`BYTECODE_NOTE.md`** - How to generate and read full disassembly
+
+#### 📸 Process Screenshots (29 images)
+- PyInstaller extraction process
+- Wine troubleshooting attempts (educational failures!)
+- Failed decode outputs showing garbage
+- Directory structures after extraction
+- grep search results
+
+#### 📖 Extended Analysis
+- Wine dependency troubleshooting saga (educational!)
+- Detailed cryptographic vulnerability analysis
+- Real-world security implications
+- Defensive programming recommendations
+- Production vulnerability parallels
+
+**Note:** This main write-up contains everything needed to understand and solve the challenge. The deep dive is for those who want to reproduce the work, practice techniques, or study the security implications in depth.
+
+---
+
 ## Tools Reference
 
 ### Primary Tools Used
@@ -1595,7 +1661,7 @@ python -m uncompyle6 app.pyc > app.py
 | **pycdc** | Decompile Python bytecode | ✅ | ⚠️ Didn't support Python 3.13 |
 | **Ghidra** | Binary reverse engineering | ❌ | Not needed (PyInstaller extraction easier) |
 | **IDA Pro** | Disassembler/debugger | ❌ | Overkill for Python bytecode |
-| **strings** | Extract strings from binary | ✅ | Revealed it was Python |
+| **strings** | Extract strings from binary | ✅ | ✅ Revealed it was Python |
 
 ### Command Reference
 
