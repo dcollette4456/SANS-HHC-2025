@@ -1,0 +1,255 @@
+# Burp Suite WebSocket Capture - Step-by-Step Guide
+
+## Prerequisites
+- Burp Suite Community Edition (free) installed
+- Browser configured to use Burp proxy
+- Challenge URL: https://signals.holidayhackchallenge.com/
+
+## Step-by-Step Instructions
+
+### 1. Start Burp Suite
+```
+- Open Burp Suite
+- Go to "Proxy" tab
+- Go to "Options" sub-tab
+- Verify proxy listener is running on 127.0.0.1:8080
+```
+
+### 2. Configure Browser Proxy
+```
+Firefox (recommended):
+- Settings > Network Settings > Manual proxy configuration
+- HTTP Proxy: 127.0.0.1, Port: 8080
+- Check "Use this proxy for HTTPS"
+
+Chrome:
+- Install browser extension or use system proxy settings
+- Set HTTP/HTTPS proxy to 127.0.0.1:8080
+```
+
+### 3. Install Burp Certificate (if needed)
+```
+- In browser, go to: http://burp
+- Click "CA Certificate" to download
+- Install certificate in browser (for HTTPS)
+```
+
+### 4. Start Capture
+```
+a) In Burp Suite:
+   - Go to "Proxy" > "Intercept" tab
+   - Click "Intercept is on" to toggle OFF (let traffic flow)
+   - Go to "WebSockets history" tab
+
+b) In Browser:
+   - Navigate to: https://signals.holidayhackchallenge.com/
+   - You should see the oscilloscope page load
+
+c) Establish ALL connections:
+   - Click "1-Wire" tab (starts DQ wire WebSocket)
+   - Click "SPI" tab (starts MOSI and SCK WebSockets)
+   - Click "I2C" tab (starts SDA and SCL WebSockets)
+   - Leave page on I2C tab (or any tab - doesn't matter now)
+
+d) Wait and observe:
+   - Watch the oscilloscope waveforms
+   - Let it run for 60-90 seconds
+   - Look for visual pattern repetition (signals looping)
+```
+
+### 5. View Captured Data
+```
+In Burp Suite:
+- Go to "Proxy" > "WebSockets history" tab
+- You should see 5 WebSocket connections:
+  * wss://signals.holidayhackchallenge.com/wire/dq
+  * wss://signals.holidayhackchallenge.com/wire/mosi
+  * wss://signals.holidayhackchallenge.com/wire/sck
+  * wss://signals.holidayhackchallenge.com/wire/sda
+  * wss://signals.holidayhackchallenge.com/wire/scl
+
+- Each connection will have MANY messages
+- Messages contain single characters: "0" or "1"
+```
+
+### 6. Export Data - Method 1 (Manual)
+```
+For EACH of the 5 connections:
+
+a) Click on the connection in the list
+b) Go to "Messages" tab in lower pane
+c) You'll see hundreds/thousands of messages
+d) Click first message
+e) Shift+Click last message (select all)
+f) Right-click > Copy
+g) Paste into text editor
+h) Remove headers, keep only the 0s and 1s
+i) Save as: dq.txt, mosi.txt, sck.txt, sda.txt, scl.txt
+```
+
+### 7. Export Data - Method 2 (Python Script)
+```python
+# Save this as extract_websocket.py
+
+import json
+import re
+
+# Burp Suite exports WebSocket history as XML
+# Parse and extract 0/1 sequences
+
+def extract_signals(burp_export_file):
+    """Extract signals from Burp WebSocket export"""
+    
+    signals = {
+        'dq': [],
+        'mosi': [],
+        'sck': [],
+        'sda': [],
+        'scl': []
+    }
+    
+    # Read Burp export file
+    with open(burp_export_file, 'r') as f:
+        content = f.read()
+    
+    # Find all WebSocket messages
+    # Pattern: messages to /wire/{wirename}
+    for wire in signals.keys():
+        pattern = f'/wire/{wire}.*?direction="(incoming|outgoing)">(0|1)'
+        matches = re.findall(pattern, content)
+        signals[wire] = [int(m[1]) for m in matches]
+    
+    return signals
+
+# Usage:
+# signals = extract_signals('burp_export.xml')
+# with open('signals_complete.json', 'w') as f:
+#     json.dump(signals, f)
+```
+
+### 8. Create JSON File
+```
+Combine all 5 wire captures into one JSON file:
+
+{
+  "dq": [0,1,0,1,0,1,...],      // All bits from DQ wire
+  "mosi": [0,1,0,1,0,1,...],    // All bits from MOSI wire
+  "sck": [0,1,0,1,0,1,...],     // All bits from SCK wire
+  "sda": [0,1,0,1,0,1,...],     // All bits from SDA wire
+  "scl": [0,1,0,1,0,1,...]      // All bits from SCL wire
+}
+
+Save as: signals_extended_capture.json
+```
+
+## What to Look For in Burp
+
+### Message Counts
+Each wire should have MANY messages if capture was successful:
+```
+Connection: wss://.../wire/dq
+Messages: 5000+ (or more)
+
+Connection: wss://.../wire/mosi
+Messages: 5000+ (or more)
+
+etc.
+```
+
+If you only see ~500 messages per wire, capture duration was too short.
+
+### Message Format
+Each message should contain:
+```
+Direction: Server to client
+Length: 1 byte
+Content: "0" or "1"
+```
+
+### Time Stamps
+Check message timestamps:
+- Should span 60+ seconds
+- Should have consistent frequency
+- Gaps indicate connection issues
+
+## Common Issues
+
+### Issue: Only seeing ~500 messages per wire
+**Solution:** Capture for longer duration (90+ seconds)
+
+### Issue: WebSocket connection shows "Closed"
+**Solution:** Make sure Intercept is OFF, reload page, click all tabs again
+
+### Issue: Certificate errors
+**Solution:** Install Burp CA certificate in browser
+
+### Issue: No WebSocket connections visible
+**Solution:** 
+- Check browser proxy settings
+- Verify Burp proxy listener is running
+- Try different browser
+
+### Issue: Messages show binary data, not "0" or "1"
+**Solution:** This is correct if it's 0x00 or 0x01 - convert to ASCII "0"/"1"
+
+## Verification
+
+After capture, verify you have good data:
+
+```bash
+# Count messages in each file
+wc -l dq.txt mosi.txt sck.txt sda.txt scl.txt
+
+# Should see:
+# 5000+ dq.txt (or more)
+# 5000+ mosi.txt
+# 5000+ sck.txt
+# 5000+ sda.txt
+# 5000+ scl.txt
+
+# Check for pattern (SPI clock should alternate)
+head -100 sck.txt
+# Should see: 01010101010101...
+```
+
+## Next Steps After Capture
+
+1. Upload signals_extended_capture.json to Claude
+2. Run decode_all_signals.js on the extended dataset
+3. Look for complete I2C key (should be ~31 bytes to match SPI)
+4. XOR decrypt SPI message
+5. Extract flag!
+
+## Tips for Success
+
+✓ Start Burp BEFORE opening browser
+✓ Disable browser cache (may interfere)
+✓ Click ALL three tabs to start all connections
+✓ Let it run for AT LEAST 60 seconds
+✓ Don't switch tabs during capture
+✓ Export each wire connection separately
+✓ Verify message counts before stopping
+
+## Emergency Alternative: Browser DevTools
+
+If Burp doesn't work:
+
+```javascript
+// Run in browser console
+const captures = { dq: [], mosi: [], sck: [], sda: [], scl: [] };
+const wires = ['dq', 'mosi', 'sck', 'sda', 'scl'];
+
+wires.forEach(wire => {
+  const ws = new WebSocket(`wss://signals.holidayhackchallenge.com/wire/${wire}`);
+  ws.onmessage = (e) => captures[wire].push(parseInt(e.data));
+});
+
+// Wait 60 seconds, then:
+// console.log(JSON.stringify(captures));
+// Copy output and save
+```
+
+---
+**Goal:** Capture 5000+ bits per wire over 60+ seconds
+**Expected file size:** ~50-100 KB JSON file
+**Current limitation:** Browser stops at 500 bits - Burp captures ALL
