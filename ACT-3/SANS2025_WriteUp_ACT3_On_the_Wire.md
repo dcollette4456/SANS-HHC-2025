@@ -1,4 +1,4 @@
-# Act 3: On the Wire
+# On the Wire
 
 **Challenge Type:** Protocol Analysis, Signal Decoding, Cryptography  
 **Difficulty:** ⭐⭐⭐⭐ (4/5)  
