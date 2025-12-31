@@ -1,4 +1,4 @@
-# SANS Holiday Hack Challenge 2025 - Act 3: On the Wire
+# Act 3: On the Wire
 
 **Challenge Type:** Protocol Analysis, Signal Decoding, Cryptography  
 **Difficulty:** ⭐⭐⭐⭐ (4/5)  
