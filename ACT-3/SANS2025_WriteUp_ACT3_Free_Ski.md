@@ -1806,8 +1806,4 @@ tail -n 20 file.txt  # Last 20 lines
 
 ---
 
-**Submitted for SANS Holiday Hack Challenge 2025 Competition**
-
-**Submission Date:** December 31, 2025
-
-**Contact:** dcollette4456@github.com
+**Contact:** dcollette4456@gmail.com
