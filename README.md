@@ -8,7 +8,7 @@
 
 ## 📋 Table of Contents
 
-### Act 1: The Gnome Invasion
+### Act 1: The Gnome Invasion - ✅ Completed
 1. [Its All About Defang](ACT-1/SANS2025_WriteUp_ACT1_Its_All_About_Defang.md) - ⭐ - Defang phishing IOCs
 2. [Neighborhood Watch Bypass](ACT-1/SANS2025_WriteUp_ACT1_Neighborhood_Watch_Bypass.md) ⭐⭐ - Restore fire alarm
 3. [Santa's Gift-Tracking Service Port Mystery](ACT-1/SANS2025_WriteUp_ACT1_Santas_Gift_Tracker.md) ⭐ - Find tracker port
@@ -20,7 +20,7 @@
 9. [The Open Door](ACT-1/09-the-open-door.md) ⭐ - Find exposed RDP
 10. [Owner](ACT-1/10-owner.md) ⭐⭐ - Find excessive permissions
     
-### Act 2: Advanced Challenges
+### Act 2: Advanced Challenges - ✅ Completed
 1. [Retro Recovery](ACT-2/SANS2025_WriteUp_ACT2_Retro_Recovery.md) ⭐⭐ - Recover deleted files
 2. [Mail Detective](ACT-2/SANS2025_WriteUp_ACT2_Mail_Detective.md) ⭐⭐ - Find malicious email
 3. [IDORable Bistro](ACT-2/SANS2025_WriteUp_ACT2_Idorable_Bistro.md) ⭐⭐ - Unmask the gnome
@@ -29,11 +29,12 @@
 6. [Quantgnome Leap](ACT-2/SANS2025_WriteUp_ACT2_Quantgnome_Leap.md) ⭐⭐ - Quantum crypto riddles
 7. [Rogue Gnome Identity Provider](ACT-2/SANS2025_WriteUp_ACT2_Rogue_Gnome_Identity_Provider.md) ⭐⭐ - Gain admin access
 
-### Act 3: Expert Challenges
-1. [GnomeTea - Firebase Security Misconfiguration](ACT-3/01-gnometea.md) ⭐⭐⭐ (In Progress)
-2. [Snowcat Privilege Escalation](ACT-3/02-snowcat-privilege-escalation.md) ⭐⭐⭐ (In Progress)
-3. [On the Wire](ACT-3/SANS2025_WriteUp_ACT3_On_the_Wire.md) ⭐⭐⭐⭐ - (In Progress)
-4. [Free Ski - PyInstaller Reverse Engineering](ACT-3/SANS2025_WriteUp_ACT3_Free_Ski.md) ⭐⭐⭐⭐⭐ - Decode hidden flags
+### Act 3: Expert Challenges - ⚠️ Partial
+1. [GnomeTea - Firebase Security Misconfiguration](ACT-3/01-gnometea.md) ⭐⭐⭐ - 🔴 In Progress
+2. [Snowcat Privilege Escalation](ACT-3/02-snowcat-privilege-escalation.md) ⭐⭐⭐ - 🔴 In Progress
+3. [On the Wire](ACT-3/SANS2025_WriteUp_ACT3_On_the_Wire.md) ⭐⭐⭐⭐ - 🔴 In Progress
+4. [Schrödinger's Scope](ACT-3/SANS2025_WriteUp_ACT2_Schrodingers_Scope.md) ⭐⭐⭐ - 🔴 In Progress
+5. [Free Ski - PyInstaller Reverse Engineering](ACT-3/SANS2025_WriteUp_ACT3_Free_Ski.md) ⭐⭐⭐⭐⭐ - Decode hidden flags - ✅ Completed 
 
 ---
 
@@ -70,6 +71,7 @@
 | GnomeTea | ⭐⭐⭐ | Firebase/NoSQL | Firestore exploitation, security rules bypass, OSINT |
 | Snowcat Privilege Escalation | ⭐⭐⭐ | Binary Exploitation | Java deserialization (CVE-2025-24813), SUID binaries |
 | On the Wire | ⭐⭐⭐⭐ | Signal Decoding Challenge | Serial protocol analysis (SPI/I2C/1-Wire), WebSocket capture automation, XOR cryptanalysis |
+| Schrödinger's Scope | ⭐⭐⭐ | Web Application Security | Client-side parameter injection, session fixation, sessionStorage exploitation, scope discipline |
 | Free Ski | ⭐⭐⭐⭐⭐ | Reverse Engineering | PyInstaller extraction, Python bytecode analysis, XOR cipher, PRNG exploitation |
 
 ---
